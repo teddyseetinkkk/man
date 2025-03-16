@@ -1,209 +1,4 @@
-local Config = {
-	["Key"] = '1',
-	["Link Key"] = ""
-}
-local CheckedKey = false
-local ScreenGui = Instance.new("ScreenGui")
-local KeyFrame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local DropShadowHolder = Instance.new("Frame")
-local DropShadow = Instance.new("ImageLabel")
-local NAMEHUB = Instance.new("TextLabel")
-local FEATURES = Instance.new("Frame")
-local InputFrame = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local UICorner_3 = Instance.new("UICorner")
-local UIStroke = Instance.new("UIStroke")
-local InputKey = Instance.new("TextBox")
-local GetKeyFrame = Instance.new("Frame")
-local UICorner_4 = Instance.new("UICorner")
-local Ngu1 = Instance.new("TextLabel")
-local CheckKeyFrame = Instance.new("Frame")
-local Click = Instance.new("TextButton")
-local Click1 = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local Ngu2 = Instance.new("TextLabel")
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-KeyFrame.Name = "KeyFrame"
-KeyFrame.Parent = ScreenGui
-KeyFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-KeyFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
-KeyFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KeyFrame.BorderSizePixel = 0
-KeyFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-KeyFrame.Size = UDim2.new(0, 250, 0, 125)
-UICorner.Parent = KeyFrame
-DropShadowHolder.Name = "DropShadowHolder"
-DropShadowHolder.Parent = KeyFrame
-DropShadowHolder.BackgroundTransparency = 1.000
-DropShadowHolder.BorderSizePixel = 0
-DropShadowHolder.Size = UDim2.new(1, 0, 1, 0)
-DropShadowHolder.ZIndex = 0
-DropShadow.Name = "DropShadow"
-DropShadow.Parent = DropShadowHolder
-DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
-DropShadow.BackgroundTransparency = 1.000
-DropShadow.BorderSizePixel = 0
-DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
-DropShadow.Size = UDim2.new(1, 47, 1, 47)
-DropShadow.ZIndex = 0
-DropShadow.Image = "rbxassetid://6014261993"
-DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
-DropShadow.ImageTransparency = 0.500
-DropShadow.ScaleType = Enum.ScaleType.Slice
-DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
-NAMEHUB.Name = "NAME HUB"
-NAMEHUB.Parent = KeyFrame
-NAMEHUB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-NAMEHUB.BackgroundTransparency = 1.000
-NAMEHUB.BorderColor3 = Color3.fromRGB(0, 0, 0)
-NAMEHUB.BorderSizePixel = 0
-NAMEHUB.Size = UDim2.new(1, 0, 0.140000001, 30)
-NAMEHUB.Font = Enum.Font.GothamBold
-NAMEHUB.Text = "Teddy HUB KEY SYSTEM"
-NAMEHUB.TextColor3 = Color3.fromRGB(8, 177, 255)
-NAMEHUB.TextSize = 15.000
-NAMEHUB.TextWrapped = true
-NAMEHUB.TextTransparency = 1
-FEATURES.Name = "FEATURES"
-FEATURES.Parent = KeyFrame
-FEATURES.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-FEATURES.BackgroundTransparency = 1.000
-FEATURES.BorderColor3 = Color3.fromRGB(0, 0, 0)
-FEATURES.BorderSizePixel = 0
-FEATURES.Position = UDim2.new(0, 0, 0, 40)
-FEATURES.Size = UDim2.new(1, 0, 1, -39)
-FEATURES.ClipsDescendants = true
-InputFrame.Name = "InputFrame"
-InputFrame.Parent = FEATURES
-InputFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-InputFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-InputFrame.BackgroundTransparency = 1.000
-InputFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-InputFrame.BorderSizePixel = 0
-InputFrame.Position = UDim2.new(0.5, 0, 0.300000012, 0)
-InputFrame.Size = UDim2.new(0, 0, 0, 30)
-UICorner_2.CornerRadius = UDim.new(0, 5)
-UICorner_2.Parent = InputFrame
-UICorner_3.CornerRadius = UDim.new(0, 5)
-UIStroke.Transparency = 1
-UICorner_3.Parent = UICorner_2
-UIStroke.Parent = InputFrame
-UIStroke.Color = Color3.fromRGB(60, 60, 60)
-UIStroke.Thickness = 2.000
-InputKey.Name = "InputKey"
-InputKey.Parent = InputFrame
-InputKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-InputKey.BackgroundTransparency = 1.000
-InputKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
-InputKey.BorderSizePixel = 0
-InputKey.ClipsDescendants = true
-InputKey.Size = UDim2.new(1, 0, 1, 0)
-InputKey.Font = Enum.Font.GothamBold
-InputKey.PlaceholderColor3 = Color3.fromRGB(144, 144, 144)
-InputKey.PlaceholderText = "Input Key"
-InputKey.Text = ""
-InputKey.TextColor3 = Color3.fromRGB(255, 255, 255)
-InputKey.TextSize = 13.000
-GetKeyFrame.Name = "GetKeyFrame"
-GetKeyFrame.Parent = FEATURES
-GetKeyFrame.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
-GetKeyFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-GetKeyFrame.BorderSizePixel = 0
-GetKeyFrame.Position = UDim2.new(-1.187692314, 0, 0.515527964, 0)
-GetKeyFrame.Size = UDim2.new(0, 89, 0, 34)
-UICorner_4.CornerRadius = UDim.new(0, 5)
-UICorner_4.Parent = GetKeyFrame
-Ngu1.Name = "Ngu1"
-Ngu1.Parent = GetKeyFrame
-Ngu1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Ngu1.BackgroundTransparency = 1.000
-Ngu1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Ngu1.BorderSizePixel = 0
-Ngu1.Size = UDim2.new(1, 0, 1, 0)
-Ngu1.Font = Enum.Font.GothamBold
-Ngu1.Text = "GetKey"
-Ngu1.TextColor3 = Color3.fromRGB(255, 255, 255)
-Ngu1.TextSize = 13.000
-Click1.Name = "Click"
-Click1.Parent = GetKeyFrame
-Click1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Click1.BackgroundTransparency = 1.000
-Click1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Click1.BorderSizePixel = 0
-Click1.Size = UDim2.new(1, 0, 1, 0)
-Click1.Font = Enum.Font.SourceSans
-Click1.Text = ""
-Click1.TextColor3 = Color3.fromRGB(0, 0, 0)
-Click1.TextSize = 14.000
-Click1.Activated:Connect(function()
-   setclipboard(Config["Link Key"])
-end)
-CheckKeyFrame.Name = "CheckKeyFrame"
-CheckKeyFrame.Parent = FEATURES
-CheckKeyFrame.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
-CheckKeyFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CheckKeyFrame.BorderSizePixel = 0
-CheckKeyFrame.Position = UDim2.new(1.55384618, 0, 0.515527964, 0)
-CheckKeyFrame.Size = UDim2.new(0, 81, 0, 34)
-UICorner_5.CornerRadius = UDim.new(0, 5)
-UICorner_5.Parent = CheckKeyFrame
-Ngu2.Name = "Ngu2"
-Ngu2.Parent = CheckKeyFrame
-Ngu2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Ngu2.BackgroundTransparency = 1.000
-Ngu2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Ngu2.BorderSizePixel = 0
-Ngu2.Size = UDim2.new(1, 0, 1, 0)
-Ngu2.Font = Enum.Font.GothamBold
-Ngu2.Text = "Check Key"
-Ngu2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Ngu2.TextSize = 13.000
-local L_1 = game:GetService("TweenService")
-L_1:Create(KeyFrame, TweenInfo.new(1, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = UDim2.new(0, 325, 0, 200)}):Play()
-wait(0.6)
-L_1:Create(NAMEHUB, TweenInfo.new(1, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
-L_1:Create(InputFrame, TweenInfo.new(1, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = UDim2.new(0, 200, 0, 30)}):Play()
-UIStroke.Transparency = 0
-L_1:Create(GetKeyFrame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(0.187692314, 0, 0.515527964, 0)}):Play()
-L_1:Create(CheckKeyFrame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(0.55384618, 0, 0.515527964, 0)}):Play()
-Click.Name = "Click"
-Click.Parent = CheckKeyFrame
-Click.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Click.BackgroundTransparency = 1.000
-Click.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Click.BorderSizePixel = 0
-Click.Size = UDim2.new(1, 0, 1, 0)
-Click.Font = Enum.Font.SourceSans
-Click.Text = ""
-Click.TextColor3 = Color3.fromRGB(0, 0, 0)
-Click.TextSize = 14.000
-Click.Activated:Connect(function()
-	print('Checking Key!')
-	wait(1)
-	print("Get Key From Input...")
-	wait(.2)
-	print(InputKey.Text)
-	wait(0.8)
-	print("GET Response On Website Please Wait")
-	wait(1)
-	if InputKey.Text == Config.Key then
-		print("Key Availd!!")
-		wait(.2)
-		local L_1 = game:GetService("TweenService")
-		L_1:Create(KeyFrame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 0)}):Play()
-		L_1:Create(NAMEHUB, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 1}):Play()
-		L_1:Create(InputFrame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 0)}):Play()
-		UIStroke.Transparency = 1
-		L_1:Create(GetKeyFrame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(-1.187692314, 0, 0.515527964, 0)}):Play()
-		L_1:Create(CheckKeyFrame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(1.55384618, 0, 0.515527964, 0)}):Play()
-		CheckedKey = true
-	elseif InputKey.Text ~= Config.Key then
-		print("Key Not Avalid!!")
-	end
-end)
-repeat wait() until CheckedKey
-------------------------------------------------------------------------------------------------------------------------------------
+
 local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
@@ -1126,7 +921,7 @@ spawn(function()
     end
 end)
 
-Toggle = Settings:AddToggle("Toggle", {Title = "Auto Turn On Buso", Default = true })
+Toggle = Tabs.Settings:AddToggle("Toggle", {Title = "Auto Turn On Buso", Default = true })
 Toggle:OnChanged(function(Value)
     getgenv().AUTOHAKI = Value
 end)
@@ -1149,7 +944,7 @@ spawn(function()
         end
     end
 end)
-Toggle = Settings:AddToggle("Toggle", { Title = "Auto Turn On Race V4", Default = false })
+Toggle = Tabs.Settings:AddToggle("Toggle", { Title = "Auto Turn On Race V4", Default = false })
 Toggle:OnChanged(function(Value)
     getgenv().AutoTurnOnV4 = Value
 end)
@@ -1174,7 +969,7 @@ task.spawn(function()
         end
     end
 end)
-Toggle = Settings:AddToggle("Toggle", {Title = "Auto Turn On Race V3", Default = false })
+Toggle = Tabs.Settings:AddToggle("Toggle", {Title = "Auto Turn On Race V3", Default = false })
 Toggle:OnChanged(function(Value)
     getgenv().AutoTurnOnV3 = Value
 end)
@@ -1192,7 +987,7 @@ task.spawn(function()
         end)
     end
 end)
-local Toggle = Settings:AddToggle("Toggle", {Title = "Auto Set Spawn Point", Default = false })
+local Toggle = Tabs.Settings:AddToggle("Toggle", {Title = "Auto Set Spawn Point", Default = false })
 local lastSetState = false
 Toggle:OnChanged(function(Value)
     getgenv().Set = Value
@@ -1205,7 +1000,7 @@ Toggle:OnChanged(function(Value)
         end
     end
 end)
-Toggle = Settings:AddToggle("Toggle", {Title = "Anti AFK", Default = true })
+Toggle = Tabs.Settings:AddToggle("Toggle", {Title = "Anti AFK", Default = true })
 Toggle:OnChanged(function(Value)
     getgenv().AntiAFK = Value 
 end)
